@@ -1,33 +1,10 @@
 import React from 'react';
 class CartItem extends React.Component{
 
-         constructor(){
-          super();
-          this.state={
-              price:999,
-              title: "Device",
-              qty:1,
-              img:''
-          }
-         }
-
-   incQuantity=()=>{
-       const value=this.state.qty+1;
- this.setState({qty:value});
-   }
-   decQuantity=()=>{
-       
-   
-    if(this.state.qty>0){
-        const value=this.state.qty-1;
-        
-this.setState({qty:value});
-    }
-}
-
-
-    render(){
-  const {price,title,qty}=this.state;
+  
+  render(){
+  const {price,title,qty}=this.props.product;
+  const {product,onIncreaseQty,onDecreaseQty,onDelete}=this.props;
 
         return(
           <div className="cart-item">
@@ -36,7 +13,7 @@ this.setState({qty:value});
               </div>
               <div className="right-block">
                  <div style={{fontSize:25}}>{title}</div>
-                 <div style={{color:"grey"}}>{price}RS</div>
+                 <div style={{color:"grey"}}>Rs{price}</div>
                  <div style={{color:"grey"}}>{qty}</div>
                  <div className="cart-item-actions">
                 {/*buttons*/}
@@ -44,17 +21,20 @@ this.setState({qty:value});
                  alt="inc" 
                  className="action-icons"
                   src="https://bit.ly/36ImpeS"
-                   onClick={this.incQuantity}
+                   onClick={()=>onIncreaseQty(product)}
                   />
                 <img alt="dec"
                  className="action-icons"
                   src="https://bit.ly/2IhZ9uJ"
-                  onClick={this.decQuantity}
+                  onClick={()=>onDecreaseQty(product)}
                   />
                 <img 
                 alt="del" 
                 className="action-icons" 
-                src="https://bit.ly/3gehsxm"/>
+                src="https://bit.ly/3gehsxm"
+                onClick={()=>onDelete(product.id)}
+                />
+                
                
                  </div>
 
