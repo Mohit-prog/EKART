@@ -12,24 +12,31 @@ class App extends React.Component {
         {
             price:3000,
             title: "Watch",
-            qty:2,
-            img:'',
+            qty:3,
+            img:'https://bit.ly/33Wojqj',
             id:1
         },
         {
             price:100000,
             title: "Laptop",
             qty:1,
-            img:'',
+            img:'https://bit.ly/3oEbqt9',
             id:2
         },
         {
             price:5000,
             title: "Mobile",
-            qty:3,
-            img:'',
+            qty:1,
+            img:'https://bit.ly/3gtdLEc',
             id:3
-        }
+        },
+        {
+          price:7000,
+          title: "Joystick",
+          qty:2,
+          img:'https://bit.ly/39QSLWM',
+          id:4
+      }
 
 
        ]
