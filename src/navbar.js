@@ -15,7 +15,7 @@ const styles = {
   cartIcon: {
     height: 32,
     marginRight: 20,
-    backgroundColor:'white'
+    
   },
   nav: {
     height: 70,
