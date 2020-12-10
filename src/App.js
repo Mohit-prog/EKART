@@ -75,7 +75,7 @@ class App extends React.Component {
   };
 
   handleDeleteProduct = id => {
-    const { products } = this.state;
+   
 
     const docRef = this.db.collection("products").doc(id);
 
