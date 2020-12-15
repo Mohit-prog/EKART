@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
 // import CartItem from './CartItem';
-import Cart from "./Cart";
-import Navbar from "./Navbar";
+import Cart from "./cart";
+import Navbar from "./navbar";
 import firebase from "firebase";
 
 class App extends React.Component {
