@@ -5,7 +5,7 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import firebase  from "firebase";
 import "firebase/firestore";
-
+//our key
 const firebaseConfig = {
   apiKey: "AIzaSyCDcEhhH6NRUi8W5MjIp49gn8bIaZ8kA6g",
   authDomain: "e-cart-8e76a.firebaseapp.com",
